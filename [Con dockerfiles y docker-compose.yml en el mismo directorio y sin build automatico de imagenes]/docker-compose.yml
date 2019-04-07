@@ -1,0 +1,28 @@
+version: '3.2'
+
+services:
+    adminpro:
+        image: adminpro
+        ports: 
+            - '80:80'
+    backend:
+        image: backend
+        ports:
+            - '3000:3000'
+    mongo:
+        image: mongo
+        volumes:
+            - "mongodb:/data/db"
+            - "mongoconfig:/data/configdb"
+    mongoadmin:
+        image: mongo-express
+        ports:
+            - '8081:8081'
+        environment:
+            - ME_CONFIG_OPTIONS_EDITORTHEME:ambiance
+            - ME_CONFIG_MONGODB_SERVER:mongo
+            - ME_CONFIG_BASICAUTH_USERNAME:carlosib
+            - ME_CONFIG_BASICAUTH_PASSWORD:cricri80
+volumes:
+    mongodb:
+    mongoconfig:

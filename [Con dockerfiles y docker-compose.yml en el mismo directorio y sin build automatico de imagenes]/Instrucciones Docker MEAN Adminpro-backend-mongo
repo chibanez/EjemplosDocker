@@ -1,0 +1,11 @@
+Parado en C:\Users\Carlos\DEV\Angular\
+
+Armo la imagen de adminpro
+docker image build -t adminpro -f ./Dockerfile-adminpro adminpro/dist/adminpro
+
+Armo la imagen de backend
+docker image build -t backend -f ./Dockerfile-backend backend-server
+
+Ejecuto el docker-compose
+docker-compose up
+

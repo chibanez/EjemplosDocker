@@ -1,0 +1,7 @@
+Parado en C:\Users\Carlos\DEV\Angular\
+
+Ejecuto el docker-compose
+docker-compose up
+
+Si hago "docker-compose up --build" me regenera las imagenes de adminpro y backend
+
